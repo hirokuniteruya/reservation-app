@@ -1,0 +1,24 @@
+<div class="container mt-4 text-center">
+
+    <h2>はろー</h2>
+
+    <div class="row">
+
+        <div *ngFor="let product of products; let productId = index" class="col-sm">
+            <a [routerLink]="[productId]">
+                <div class="card">
+                    <img src="{{ product.coverImage }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> 商品名：{{ product.name }} </h5>
+                        <p class="card-text">
+                            This is ProductId is {{ productId }}
+                            <br />
+                            概要：{{ product.description }}
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+</div>
